@@ -1,13 +1,13 @@
-use lazy_static::lazy_static;
+use static_init::dynamic;
 use rand::{seq::SliceRandom, Rng};
 use std::collections::BTreeMap;
 use std::rc::Rc;
 
 use crate::{parser::parse_str, Error, Execute, Result, Rule};
 
-lazy_static! {
-    pub(crate) static ref ORIGIN: String = String::from("origin");
-}
+#[dynamic]
+pub(crate) static ORIGIN: String = String::from("origin");
+
 
 /// Represents a single, complete tracery grammar.
 ///

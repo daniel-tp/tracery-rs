@@ -24,7 +24,7 @@ serde_json = {version = "^1", optional = true}
 rand = "^0.8"
 Inflector = "^0.11"
 split_preserve = "^0.1"
-lazy_static = "^1"
+static_init="^0.5"
 thiserror = "^1"
 
 [dev-dependencies]

@@ -3,11 +3,11 @@ use crate::Grammar;
 use crate::Node;
 use crate::Result;
 
-use lazy_static::lazy_static;
+use static_init::dynamic;
 
-lazy_static! {
-    static ref POP: String = String::from("POP");
-}
+#[dynamic]
+static POP: String = String::from("POP");
+
 
 #[derive(Debug, Clone, PartialEq)]
 pub(crate) struct Rule(pub(crate) Vec<Node>);
